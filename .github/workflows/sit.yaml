@@ -26,7 +26,7 @@ jobs:
             await github.rest.actions.createWorkflowDispatch({
               owner: context.repo.owner,
               repo: 'ybm-cli',
-              workflow_id: '.github/workflows/test.yml',
+              workflow_id: 143302887,
               ref: 'main',
               inputs: {
                 provider_branch: '${{ github.event.pull_request.head.ref || github.ref_name }}',
@@ -48,7 +48,7 @@ jobs:
               const runs = await github.rest.actions.listWorkflowRuns({
                 owner: context.repo.owner,
                 repo: 'ybm-cli',
-                workflow_id: '.github/workflows/test.yml',
+                workflow_id: 143302887,
                 branch: 'main',
                 event: 'workflow_dispatch'
               });
